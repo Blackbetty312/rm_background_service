@@ -1,0 +1,14 @@
+  version: '2'
+  
+  services:
+    remove_background_app:
+      build:
+        context: .
+        dockerfile: Dockerfile
+      mem_limit: ${MEMORY_LIMIT}
+      env_file: .env.dev
+      volumes:
+        - .:/remove_background_app
+      ports:
+        - "127.0.0.1:${PORT}:8000"
+      restart: always

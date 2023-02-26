@@ -1,0 +1,7 @@
+.env
+.env.dev
+.env.prod
+/uploads/edited_file/*
+/uploads/original_file/*
+!uploads/edited_file/.keep
+!uploads/original_file/.keep

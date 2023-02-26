@@ -1,0 +1,13 @@
+  version: '2'
+  
+  remove_background_app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    mem_limit: ${MEMORY_LIMIT}
+    env_file: .env.prod
+    ports:
+      - "127.0.0.1:${PORT}:8000"
+    volumes:
+      - "./production.log:/remove_background_app/production.log"
+    restart: always
